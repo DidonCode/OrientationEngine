@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+	<head>
+		<title>CO Documentation</title>
+	</head>
+
+	<body style="margin: 0; height: 100%;">
+
+		<div style="height: 100%;">
+			<div style="width: 20%; background-color: #23272a; height: 100%; position: absolute; overflow-y:scroll;">
+				<div style="padding: 25px;">
+
+					<img src="logo.png" width="100%">
+
+					<br><br>
+					
+					<hr style="width: 98%;">
+
+					<br>
+
+					<!-- ------------------- -->
+
+					<p>ENGINE</p>
+					
+					<a href="">Software Loop</a>
+
+					<br><br>
+
+					<!-- ------------------- -->
+
+					<p>INTERFACE</p>
+					
+					<a href="#display-manager">Display Manager</a>
+
+					<br><br>
+
+					<!-- ------------------- -->
+
+					<p>GUIS</p>
+
+					<a href="#text">Text</a>
+					<br>
+					<a href="#button">Button</a>
+
+					<br><br>					
+
+					<!-- ------------------- -->
+
+					<p>GRAPHICS</p>
+
+					<a href="#point">Point</a>
+					<br>
+					<a href="#line">Line</a>
+					<br>
+					<a href="#player-trace">Player Trace</a>
+					<br>
+					<a href="#texture">Texture</a>
+					<br>
+					<a href="#render">Render</a>
+
+					<br><br>
+
+					<!-- ------------------- -->
+
+					<p>ENTITY</p>
+
+					<a href="#player">Player</a>
+					<br>
+					<a href="#camera">Camera</a>
+					<br>
+					<a href="#entity-manager">Entity Manager</a>
+
+					<br><br>
+
+					<!-- ------------------- -->
+
+					<p>TOOL</p>
+
+					<a href="#file-manager">File Manager</a>
+					<br>
+					<a href="#colors">Colors</a>
+					<br>
+					<a href="#key-manager">Key Manager</a>
+					<br>
+					<a href="#mercator-projection">Mercator Projection</a>
+					<br><br>
+
+					<!-- ------------------- -->
+
+					<p>Maps</p>
+
+					<a href="#google-map">Google Map</a>
+
+					<br><br><br>
+
+				</div>
+			</div>
+
+			<div style="width: 77.2%; background-color: #2c2f33; height: 100%; position: absolute; left: 20%; overflow-y: scroll; padding-left: 35px;">
+				
+				<br><br>
+
+				<!-- ---------- INTERFACE ---------- -->
+
+				<h4 align="center">INTERFACE</h4>
+
+				<h5 id="display-manager">Display Manager</h5>
+
+				<div class="function">
+					<h6>public static void Create(String name, int width, int height)</h6>
+					<h6>Create display with name, width, height</h6>
+
+					<h6>public static void Update()</h6>
+					<h6>Update display</h6>
+
+					<h6>public static void Destroy()</h6>
+					<h6>Destroy display</h6>
+
+					<h6>public static void Clear()</h6>
+					<h6>Display is cleaned</h6>
+
+					<h6>public static boolean IsRunning()</h6>
+					<h6>Return if display is launch</h6>
+
+					<br>
+				</div>
+
+				<!-- ------------ GUIS ------------ -->
+
+				<h4 align="center">GUIS</h4>
+
+				<h5 id="text">Text</h5>
+
+				<div class="function">
+					<h6>public Text(String text, int x, int y, int size, FontStyle fontStyle, boolean antiAlias)</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public void GetText()</h6>
+
+					<h6>public void GetTextSyle()</h6>
+
+					<h6>public void GetX()</h6>
+
+					<h6>public void GetY()</h6>
+
+					<h6>public void SetText(String text)</h6>
+
+					<h6>public void SetTextStyle(FontSyle textSyle)</h6>
+
+					<h6>public void SetX(int x)</h6>
+
+					<h6>public void SetY(int y)</h6>
+
+					<h6>public void SetSize(int size)</h6>
+
+					<br>
+				</div>
+
+				<br>
+
+				<h5 id="button">Button</h5>
+
+				<div class="function">
+					<h6>public Button(int x, int y, int width, int height, Colors color)</h6>
+
+					<h6>public Button(Text text, int x, int y, int width, int height, Colors color)</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public Text GetText()</h6>
+
+					<h6>public int GetX()</h6>
+
+					<h6>public int GetY()</h6>
+
+					<h6>public int GetWidth()</h6>
+
+					<h6>public int GetHeight()</h6>
+
+					<h6>public Colors GetColor()</h6>
+
+					<h6>public void SetText(Text text)</h6>
+
+					<h6>public void SetX(int x)</h6>
+
+					<h6>public void SetY(int y)</h6>
+
+					<h6>public void SetWidth(int width)</h6>
+
+					<h6>public void SetHeight(int height)</h6>
+
+					<h6>public void SetColor(Colors color)</h6>
+				</div>
+
+				<!-- ---------- GRAPHICS ---------- -->
+
+				<h4 align="center">GRAPHICS</h4>
+
+				<h5 id="point">Point</h5>
+
+				<div class="function">
+					<h6>public Point(int x, int y, int size, Colors color)</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public int GetX()</h6>
+
+					<h6>public int GetY()</h6>
+
+					<h6>public int GetSize()</h6>
+
+					<h6>public void SetX(int x)</h6>
+
+					<h6>public void SetY(int y)</h6>
+
+					<h6>public void SetSize(int size)</h6>
+				</div>
+
+				<br>
+
+				<h5 id="line">Line</h5>
+
+				<div class="function">
+					<h6>public Line(Point point1, Point point2, int size)</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public Point GetPoint1()</h6>
+
+					<h6>public Point GetPoint2()</h6>
+
+					<h6>public int GetSize()</h6>
+
+					<h6>public void SetPoint1(Point point1)</h6>
+
+					<h6>public void SetPoint2(Point point2)</h6>
+
+					<h6>public void SetSize(int size)</h6>
+				</div>
+
+				<br>
+
+				<h5 id="player-trace">Player Trace</h5>
+
+				<div style="padding: 30px;">
+					
+				</div>
+
+				<br>
+
+				<h5 id="texture">Texture</h5>
+
+				<div class="function">
+					<h6>public Texture(String path)</h6>
+
+					<h6>public void Bind()</h6>
+
+					<h6>public void UnBind()</h6>
+
+					<h6>public int GetId()</h6>
+
+					<h6>public int GetWidth()</h6>
+
+					<h6>public int GetHeight()</h6>
+				</div>
+
+				<br>
+
+				<h5 id="render">Render</h5>
+
+				<div class="function">
+					<h6>public static void Quads(int x, int y, int width, int height, Colors color)</h6>
+
+					<h6>public static void TexturedQuads(int x, int y, int width, int height, Colors color, int xo, int yo)</h6>
+				</div>
+
+				<!-- ----------- ENTITY ----------- -->
+
+				<h4 align="center">ENTITY</h4>
+
+				<h5 id="player">Player</h5>
+
+				<div class="function">
+					<h6>public Player(FileManager playerData)</h6>
+
+					<h6>public void Update()</h6>
+
+					<h6>public void Render()</h6>
+				</div>
+
+				<br>
+
+				<h5 id="camera">Camera</h5>
+
+				<div class="function">
+					<h6>public Camera(Vector3f pos)</h6>
+
+					<h6>public Camera()</h6>
+
+					<h6>public void Update()</h6>
+
+					<h6>public Vector3f GetPos()</h6>
+
+					<h6>public float GetSpeed()</h6>
+
+					<h6>public void SetPos(Vector3f pos)</h6>
+
+					<h6>public void SetSpeed(float speed)</h6>
+				</div>
+
+				<br>
+
+				<h5 id="entity-manager">Entity Manager</h5>
+
+				<div class="function">
+					<h6>public EntityManager()</h6>
+
+					<h6>public void Update()</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public void AddPlayer(Player p)</h6>
+
+					<h6>public void RemovePlayer(Player p)</h6>
+
+					<h6>public List<Player> GetPlayer()</h6>
+
+					<h6>public void CleanPlayer()</h6>
+				</div>
+
+				<!-- ----------- TOOL ------------ -->
+
+				<h4 align="center">TOOL</h4>
+
+				<h5 id="file-manager">File Manager</h5>
+
+				<div class="function">
+					<h6>public EntityManager()</h6>
+
+					<h6>public void Update()</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public void AddPlayer(Player p)</h6>
+
+					<h6>public void RemovePlayer(Player p)</h6>
+				</div>
+
+				<br>
+
+				<h5 id="colors">Colors</h5>
+
+				<div class="function">
+					<h6>public Colors(float r, float g, float b)</h6>
+
+					<h6>public Colors(float r, float g, float b, float a)</h6>
+
+					<h6>public Colors(float[] color)</h6>
+
+					<h6>public float[] ConvertRGB(int r, int g, int b)</h6>
+
+					<h6>public float[] GetRGB()</h6>
+				</div>
+
+				<br>
+
+				<h5 id="key-manager">Key Manager</h5>
+
+				<div class="function">
+					<h6>public KeyManager()</h6>
+
+					<h6>public void Update()</h6>
+
+					<h6>public boolean IsKeyPress(int key)</h6>
+
+					<h6>public String GetKeyPressName()</h6>
+
+					<h6>public int GetKeyPressNumber()</h6>
+
+					<h6>public int GetMouseX()</h6>
+
+					<h6>public int GetMouseY()</h6>
+				</div>
+
+
+				<!-- ----------- MAPS ------------ -->
+
+				<h4 align="center">MAPS</h4>
+
+				<h5 id="google-map">Google Map</h5>
+
+				<div class="function">
+					<h6>public GoogleMap(String key, double latitude, double longitude, int size, int zoom, int scale, MapType mapType)</h6>
+
+					<h6>public void Render()</h6>
+
+					<h6>public int GetSize()</h6>
+
+					<h6>public Texture GetMap()</h6>
+
+					<h6>public void SetMap(Texture map)</h6>
+				</div>
+
+				<br>
+
+				<h5 id="mercator-projection">Mercator Projection</h5>
+
+				<div class="function">
+					<h6>public MercatorProjection(double centerLatitude, double centerLongitude, int areaWidthPx, int areaHeightPx, double areaScale)</h6>
+
+					<h6>public Vector2f GetLocation(int px, int py)</h6>
+
+					<h6>public Vector2f GetPoint(double latitude, double longitude)</h6>
+
+					<h6>private Vector2f ProjectPx(double px, double py)</h6>
+
+					<h6>private Vector2f ProjectLocation(double latitude, double longitude)</h6>
+
+					<h6>public double RadToDeg(double rad)</h6>
+
+					<h6>public double DegToRad(double deg)</h6>
+				</div>
+
+				<br><br>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	body{
+		font-family: Whitney,Helvetica Neue,Helvetica,Arial,sans-serif;
+		font-weight: 600;
+		line-height: 1.5;
+		background-color: #23272a;
+	}
+
+	p, h4, h5, h6{
+		color: white;
+	}
+
+	.function{
+		padding-left: 30px;
+	}
+
+	h4{
+		border: 2px solid white;
+		width: 250px;
+		margin: auto;
+	}
+
+	a{	
+		padding-left: 35px;
+		text-decoration: none;
+		font-size: 15px;
+		line-height: 1.8;
+		color: #72767d;
+		transition: 0.2s;
+	}
+
+	a:hover{
+		color: #fff;
+		transition: 0.2s;
+	}
+
+	p{
+		font-size: 16px;
+		padding-left: 15px;
+	}
+
+	::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 20px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: black;
+	}
+</style>
+
+<script>
+	$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+</script>
